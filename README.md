@@ -6,11 +6,11 @@ This is a simple curses GUI for the lightning-cli for the Blockstream c-lightnin
 
 ![screenshot](screenshot-001.png)
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+This software will only be of use to people that have a bitcoin node (or access to one) and a Lightning Network node running. Additionally, you'll need to have nodejs (including npm).
 
 ```
 Give examples
@@ -18,45 +18,22 @@ Give examples
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Installation of Lightning Curse is extremely simple. There are only two steps.
+* Clone this repository
 
 ```
-until finished
+git clone https://github.com/craigsailor/lightning_curse
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+* Install the required libraries
 
 ```
-Give an example
+cd lightning_curse
+npm install
 ```
 
-### And coding style tests
+Now that you've done that, start it with the command `npm start`
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
