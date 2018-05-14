@@ -1,0 +1,17 @@
+{
+	"name": "Lightning_Curse",
+	"description": "Lightning Network Curses Program",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"version": "0.0.1",
+	"dependencies": {
+		"blessed": "^0.1.81",
+		"prettyjson": "^1.2.1"
+	},
+	"scripts": {
+		"start": "node ./bin/light_curse.js"
+	}
+}
