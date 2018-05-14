@@ -1,0 +1,287 @@
+{
+	"connect" : {
+		"desc" : "Connect to {id} at {host} (which can end in ':port' if not default). {id} can also be of the form id@host",
+		"user_level": 0,
+		"args" : {
+			"ID": "",
+			"host": "",
+			"port": ""
+		}
+	},
+	"invoice" : {
+		"desc" : "Create an invoice for {msatoshi} with {label} and {description} with optional {expiry} seconds (default 1 hour)",
+		"user_level": 0,
+		"args" : ""
+	},
+	"listchannels" : {
+		"desc" : "Show channel {short_channel_id} (or all known channels, if no {short_channel_id})",
+		"user_level": 0,
+		"args" : {
+			"channel_id": ""
+		}
+	},
+	"listfunds" : {
+		"desc" : "Show available funds from the internal wallet",
+		"user_level": 0,
+		"args" : ""
+	},
+	"listnodes" : {
+		"desc" : "Show node {id} (or all, if no {id}), in our local network view",
+		"user_level": 0,
+		"args" : {
+			"ID": ""
+		}
+	},
+	"listinvoice" : {
+		"desc" : "(DEPRECATED) Show invoice {label} (or all, if no {label}))",
+		"user_level": 0,
+		"args" : {
+			"label": ""
+		}
+	},
+	"listinvoices" : {
+		"desc" : "Show invoice {label} (or all, if no {label})",
+		"user_level": 0,
+		"args" : {
+			"label": ""
+		}
+	},
+	"listconfigs" : {
+		"desc" : "List all configuration options, or with [config], just that one.",
+		"user_level": 0,
+		"args" : ""
+	},
+	"listpayments" : {
+		"desc" : "Show outgoing payments",
+		"user_level": 0,
+		"args" : ""
+	},
+	"listpeers" : {
+		"desc" : "Show current peers, if {level} is set, include logs for {id}",
+		"user_level": 0,
+		"args" : {
+			"level": "",
+			"ID": ""
+		}
+	},
+	"autocleaninvoice" : {
+		"desc" : "Set up autoclean of expired invoices. Perform cleanup every {cycle_seconds} (default 3600), or disable autoclean if 0. Clean up expired invoices that have expired for {expired_by} seconds (default 86400).",
+		"user_level": 0,
+		"args" : {
+			"cycle seconds": ""
+		}
+	},
+	"waitanyinvoice" : {
+		"desc" : "Wait for the next invoice to be paid, after {lastpay_index} (if supplied)",
+		"user_level": 0,
+		"args" : {
+			"lastpay index": ""
+		}
+	},
+	"waitinvoice" : {
+		"desc" : "Wait for an incoming payment matching the invoice with {label}, or if the invoice expires",
+		"user_level": 0,
+		"args" : {
+			"label": ""
+		}
+	},
+	"decodepay" : {
+		"desc" : "Decode {bolt11}, using {description} if necessary",
+		"user_level": 0,
+		"args" : {
+			"bolt11": "",
+			"description": ""
+		}
+	},
+	"stop" : {
+		"desc" : "Shut down the lightningd process",
+		"user_level": 0,
+		"args" : ""
+	},
+	"getinfo" : {
+		"desc" : "Show information about this node",
+		"user_level": 0,
+		"args" : ""
+	},
+	"getlog" : {
+		"desc" : "Show logs, with optional log {level} (info|unusual|debug|io)",
+		"user_level": 0,
+		"args" : {
+			"level": ""
+		}
+	},
+	"getroute" : {
+		"desc" : "Show route to {id} for {msatoshi}, using {riskfactor} and optional {cltv} (default 9). If specified search from {fromid} otherwise use this node as source. Randomize the route with up to {fuzzpercent} (0.0 -> 100.0, default 5.0) using {seed} as an arbitrary-size string seed.",
+		"user_level": 0,
+		"args" : {
+			"ID": "",
+			"riskfactor": "",
+			"cltv": "",
+			"fuzzpercent": ""
+		}
+	},
+	"fundchannel" : {
+		"desc" : "Fund channel with {id} using {satoshi} satoshis",
+		"user_level": 0,
+		"args" : {
+			"ID": "",
+			"satoshi": ""
+		}
+	},
+	"pay" : {
+		"desc" : "Send payment specified by {bolt11} with optional {msatoshi} (if and only if {bolt11} does not have amount), {description} (required if {bolt11} uses description hash), {riskfactor} (default 1.0), {maxfeepercent} (default 0.5) the maximum acceptable fee as a percentage (e.g. 0.5 => 0.5%), and {retry_for} (default 60) the integer number of seconds before we stop retrying",
+		"user_level": 0,
+		"args" : {
+			"bolt11": "",
+			"msatoshi": "",
+			"description": "",
+			"riskfactor": "",
+			"max fee percentage": "",
+			"retry for": ""
+		}
+	},
+	"sendpay" : {
+		"desc" : "Send along {route} in return for preimage of {payment_hash}",
+		"user_level": 0,
+		"args" : {
+			"route": "",
+			"payment hash": ""
+		}
+	},
+	"waitsendpay" : {
+		"desc" : "Wait for payment attempt on {payment_hash} to succeed or fail, but only up to {timeout} seconds.",
+		"user_level": 0,
+		"args" : {
+			"payment hash": "",
+			"timeout": ""
+		}
+	},
+	"close" : {
+		"desc" : "Close the channel with peer {id}",
+		"user_level": 0,
+		"args" : {
+			"ID": ""
+		}
+	},
+	"newaddr" : {
+		"desc" : "Get a new {bech32, p2sh-segwit} address to fund a channel",
+		"user_level": 0,
+		"args" : ""
+	},
+	"withdraw" : {
+		"desc" : "Send to {destination} address {satoshi} (or 'all') amount via Bitcoin transaction",
+		"user_level": 0,
+		"args" : {
+			"destination": "",
+			"satoshi": ""
+		}
+	},
+	"disconnect" : {
+		"desc" : "Disconnect from {id} that has previously been connected to using connect",
+		"user_level": 0,
+		"args" : {
+			"ID": ""
+		}
+	},
+	"dev-blockheight" : {
+		"desc" : "Show current block height",
+		"user_level": 1,
+		"args" : ""
+	},
+	"dev-setfees" : {
+		"desc" : "Set feerate in satoshi-per-kw for {immediate}, {normal} and {slow} (each is optional, when set, separate by spaces) and show the value of those three feerates",
+		"user_level": 1,
+		"args" : {
+			"immediate": "",
+			"normal": "",
+			"slow": ""
+		}
+	},
+	"delinvoice" : {
+		"desc" : "Delete unpaid invoice {label} with {status}",
+		"user_level": 1,
+		"args" : {
+			"label": "",
+			"status": ""
+		}
+	},
+	"delexpiredinvoice" : {
+		"desc" : "Delete all expired invoices that expired as of given {maxexpirytime} (a UNIX epoch time), or all expired invoices if not specified",
+		"user_level": 1,
+		"args" : {
+			"max expiry time": ""
+		}
+	},
+	"dev-rhash" : {
+		"desc" : "Show SHA256 of {secret}",
+		"user_level": 1,
+		"args" : {
+			"secret": ""
+		}
+	},
+	"dev-crash" : {
+		"desc" : "Crash lightningd by calling fatal()",
+		"user_level": 1,
+		"args" : ""
+	},
+	"dev-sign-last-tx" : {
+		"desc" : "Sign and show the last commitment transaction with peer {id}",
+		"user_level": 1,
+		"args" : {
+			"ID": ""
+		}
+	},
+	"dev-fail" : {
+		"desc" : "Fail with peer {id}",
+		"user_level": 1,
+		"args" : {
+			"ID": ""
+		}
+	},
+	"dev-reenable-commit" : {
+		"desc" : "Re-enable the commit timer on peer {id}",
+		"user_level": 1,
+		"args" : {
+			"ID": ""
+		}
+	},
+	"dev-forget-channel" : {
+		"desc" : "Forget the channel with peer {id}, ignore UTXO check with {force}='true'.",
+		"user_level": 1,
+		"args" : {
+			"ID": "",
+			"force": ""
+		}
+	},
+	"dev-ping" : {
+		"desc" : "Send {peerid} a ping of length {len} asking for {pongbytes}",
+		"user_level": 1,
+		"args" : {
+			"Peer ID": "",
+			"length": "",
+			"pongbytes": ""
+		}
+	},
+	"dev-memdump" : {
+		"desc" : "Show memory objects currently in use",
+		"user_level": 1,
+		"args" : ""
+	},
+	"dev-memleak" : {
+		"desc" : "Show unreferenced memory objects",
+		"user_level": 1,
+		"args" : ""
+	},
+	"dev-listaddrs" : {
+		"desc" : "Show addresses list up to derivation {index} (default is the last bip32 index)",
+		"user_level": 1,
+		"args" : {
+			"index": ""
+		}
+	},
+	"dev-rescan-outputs" : {
+		"desc" : "Synchronize the state of our funds with bitcoind",
+		"user_level": 1,
+		"args" : ""
+	}
+}
