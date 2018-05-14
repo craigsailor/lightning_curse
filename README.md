@@ -34,6 +34,8 @@ npm install
 
 Now that you've done that, start it with the command `npm start`
 
+One footnote: you do need to configure the deps/_settings.json with the full path to your lightning-cli binary. But don't worry. If you don't the software will tell you that.
+
 
 ## Built With
 
