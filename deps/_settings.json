@@ -1,7 +1,7 @@
 {
 	"name": "Lightning Curse",
-	"cli_command": "/Users/craigsailor/Documents/Cryptom/_bitcoin-lightning-test/lightning/cli/lightning-cli",
-	"user_level": 1,
+	"cli_command": "",
+	"user_level": 0,
 	"tags": [
 		"nodejs",
 		"javascript"
