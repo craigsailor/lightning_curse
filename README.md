@@ -4,7 +4,7 @@ This is a simple curses GUI for the lightning-cli for the Blockstream c-lightnin
 
 ## Getting Started
 
-!(screenshot-001.png)
+![screenshot](screenshot-001.png)
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
